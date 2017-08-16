@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+	</head>
+	<body>
+		<a-scene>
+			
+			<a-assets>
+				<a-asset-item id="mountain-obj" src="mountain.obj" dynamic-body>
+					
+				</a-asset-item>
+
+				<a-asset-item id="mountain-mtl" src="mountain.mtl" dynamic-body>
+					
+				</a-asset-item>
+			</a-assets>
+
+			<a-assets>
+				<a-asset-item id="car-obj" src="car.obj" dynamic-body>
+					
+				</a-asset-item>
+
+				<a-asset-item id="car-mtl" src="car.mtl" dynamic-body>
+					
+				</a-asset-item>
+			</a-assets>
+			
+			<a-entity>
+				<a-sphere position="-162.0 0 6.522 " scale="7 7 7" src="sun.jpeg">
+					<a-light type="point" intensity="2" distance="3" decay="0" color="white">
+						<a-light type="hemisphere" intensity="1" angle="60">
+						</a-light>
+					</a-light>
+					<a-animation attribute="rotation" dur="10000" to="180 0 0" repeat="indefinite"></a-animation>
+				</a-sphere>
+
+
+				<a-animation attribute="rotation" dur="10000" to="0 0 -180" repeat="indefinite"></a-animation>
+			</a-entity>
+		
+			
+
+
+			
+			<a-plane id="land" position="-1.46 4.719 8.569" rotation="-90 0 0" width="4" height="4" scale="22.00 45.00 1.000" src="grass.jpeg">
+			</a-plane>
+
+			<a-plane id="road1" position="41.05 6.677 -32.6" rotation="-87.7 -80.9 -8.30 " width=" 4" height=" 4" scale= "23.93 12.32 1.000" src="road.jpg"> 
+			</a-plane>
+
+			<a-plane id="road2" position="42.37 6.322 58.46 " rotation="-87.8 -80.9 -8.30" width="4" height="4" scale="21.73 12.32 1.000" src="road.jpg"> 
+			</a-plane>
+
+			<a-plane id="water" position="101.9 7 8.745" rotation="-87.8 -80.9 -8.30" width="4" height="4" scale="45.79 19.11 1" src="water.jpg"> 
+			</a-plane>
+
+			
+			<a-camera position="65.92 14.76 14.61" rotation="-12.0 69.21 0"></a-camera>
+
+			
+
+			
+			<a-sky src="sky.jpg"></a-sky>
+			
+			<a-entity obj-model="obj: #mountain-obj; mtl: #mountain-mtl" dynamic-body position="-29.5 18.37 7.365" rotation="-0.28 0.057 -1.83" scale="0.665 0.665 0.508"></a-entity>
+
+			<a-entity obj-model="obj: #car-obj; mtl: #car-mtl" dynamic-body position="48.29 7 79.71" rotation="-0.28 0.057 -1.83" scale="4 4 4">
+			
+			<a-animation attribute="position" dur="10000" to="48.29 7 -57.5" repeat="indefinite"></a-animation>	
+			
+			</a-entity>
+			
+		</a-scene>
+	</body>
+</html>
+
+
